@@ -1,0 +1,113 @@
+h1, h2, h3{
+	font-family: 'Barrio';
+}
+
+h1{
+  font-size: 4.5rem;
+}
+
+h4{
+	font-size: 2rem;
+}
+
+h3{
+  color: #660000;
+  font-size: 3.5rem;
+}
+
+p {
+	font-size: 1.3em;
+	line-height: 1.2em;
+}
+
+body {
+	text-align: center;
+}
+
+.toshow{
+  display: none;
+}
+
+
+.you {
+  color: #fff;
+  background-color: #000080;
+  border-right: 5px solid white;
+}
+
+.me {
+  color: #fff;
+  background-color: #128301;
+}
+
+.btn-danger{
+	background-color: #660000;
+	border-color: #ff9900;
+	border-width: 4px;
+	border-radius: 20px
+}
+
+.btn-danger:hover{
+	background-color: #ff9900;
+	border-color: #660000;
+}
+
+.container-fluid{
+	padding: 0px;
+}
+
+.heads{
+	background-image: url("../images/header.jpg");
+	background-size: 450px;
+	min-height: 60px;
+}
+
+.top_bar{
+	width: 100%;
+	margin: auto;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	text-align: center;
+	background: #660000;
+	color: white;
+	background-size: 100px;
+	background-position: right;
+	background-repeat: no-repeat;
+}
+
+#p_top{
+	margin-top: 10px;
+	margin-bottom: 20px;
+}
+
+.kitchens{
+	width: 90%;
+	margin: auto;
+	text-align: left;
+	font-size: 1.5;
+	color: gray;
+}
+
+.eatery{
+	font-weight: 500;
+	font-family: 'Barrio';
+	font-size: 1.7em;
+}
+
+.star{
+	color: #660000;
+}
+
+
+.kit_info{
+	margin: 40px;
+	text-align: left;
+}
+
+
+
+footer{
+	background: #330000;
+	color: #e6e6e6;
+	margin-top: 40px;
+}

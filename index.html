@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Paper Scissors Rock</title>
+		<meta charset="utf-8">
+		
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+		<!-- jQuery library -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<!-- Latest compiled JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<link href='https://fonts.googleapis.com/css?family=Barrio' rel='stylesheet'>
+
+		<link rel="stylesheet" type="text/css" href="assets/stylesheets/mkstyles.css">		
+		
+	</head>
+	<header>
+		<div class="container-fluid">
+			<div class="heads"></div>
+			<div class="top_bar">
+				<h1>Time To Play Paper Scissors Rock!</h1>
+			</div>
+		</div>
+	</header>
+	
+	<body>
+		<div class="container-fluid">
+			
+			<div class="col-md-12">
+          
+        <div class="col-md-4">
+          <img src="assets/images/game.jpg" atl="The Game" width="425" style="padding-top: 20px;" />
+        </div>
+          
+        <div class="col-md-8">
+          <h1>The Game</h1>
+          <p>Play against the Computer - Click one -  Scissor / Rock / Paper below.  Don't worry, we will keep score for you here:</p>
+            
+          <div class="row">
+            <div class="col-md-6 you">
+              <h1><span id="player_name">Player: </span><span id="player_score">0</span></h3>
+            </div>
+            <div class="col-md-6 me">
+              <h1><span id="computer_name">Computer:</span> <span id="computer_score">0</span></h3>
+            </div>
+          </div>
+          
+          <div class="row">
+    				<div class="col-md-12" style="margin:10px;">
+              <hr />
+    					<h1>Pick ONE:</h1>
+    				</div>
+            <div class="col-md-12">
+              <div class="col-md-4" id="rock">
+                <img src="assets/images/rock/rock.png" alt="Rock" width="150" />
+              </div>
+              <div class="col-md-4" id="paper">
+                <img src="assets/images/paper/paper.png" alt="Rock" width="150" />
+              </div>
+              <div class="col-md-4" id="scissors">
+                <img src="assets/images/scissors/scissors.png" alt="Rock" width="150" />
+              </div>
+            </div>
+          </div>
+        </div>
+			</div>
+			
+
+			<div class="row">
+				<div class="col-md-12" style="margin:10px;">
+          <hr />
+					<h1>The Throw Down:</h1>
+				</div>
+        <div class="col-md-12">
+          <div class="toshow" id="showing" style="min-height: 330px;">
+            <div class="col-md-4" id="rock">
+              <h3 id="player"></h3>
+              <img src="assets/images/rock/rock1.jpg" alt="Rock" width="300" id="player_pic"/>
+            </div>
+            <div class="col-md-4" id="paper">
+              <h3 style="padding-top: 20px; color: #000;">Results:</h3>
+              <h3 id="result"> </h3>
+            </div>
+            <div class="col-md-4" id="scissors">
+              <h3 id="computer"></h3>
+              <img src="assets/images/scissors/scissors1.jpg" alt="Scissors" width="300" id="computer_pic"/>
+            </div>
+          </div>
+        </div>
+		</div>
+	
+  <script src="assets/js/game.js"></script>
+	</body>
+	<footer>
+		<div class="container-fluid">
+			<div class="col-md-12">
+				<h1>Gaming Footer</h1>
+			</div>
+		</div>
+		<div class="dafeet">
+			<img src="assets/images/footer.jpg" width="100%"/>
+		</div>
+	</footer>
+</html>
