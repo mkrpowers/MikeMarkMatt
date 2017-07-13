@@ -1,5 +1,5 @@
 // Different Arrays to use:
-var computerNames = ['Godzilla', 'MasterBlater', 'Skeletor', 'Aku', 'Mandark', 'Voldemort', 'MoJo', 'Mr. Burns', 'Big Brother'];
+var computerNames = ['Godzilla', 'MasterBlater', 'Skeletor', 'Why Not Zoidberg', 'Aku', 'Mandark', 'Voldemort', 'MoJo', 'Mr. Burns', 'Big Brother'];
 var rock = ['rock1.jpg', 'rock2.jpg', 'rock3.jpg', 'rock4.jpg'];
 var paper = ['paper1.jpg', 'paper2.jpg', 'paper3.jpg', 'paper4.jpg'];
 var scissor = ['scissors1.jpg', 'scissors2.jpg', 'scissors3.jpg', 'scissors4.jpg'];
@@ -15,6 +15,7 @@ var computerThrows = '';
 var playerThrows = '';
 var playImage = '';
 var computerImage = '';
+var whoWins = 'tie';
 
 $('#rock').click(function() {
   playerThrows = "rock";
@@ -65,35 +66,54 @@ function gamePlay(playerThrows, computerThrows){
   $('#computer_pic').attr('src', 'assets/images/' + computerThrows + '/' + computerImage);
   $('#player_score').text(playerScore);
   $('#computer_score').text(computerScore);
+  if(whoWins == 'computer'){
+    $('#win_pic').attr('src', 'assets/images/' + computerThrows + '/' + computerImage);
+    $('#winner_name').text("Winner: " + computerName);
+  }
+  else if(whoWins == 'player'){
+    $('#win_pic').attr('src', 'assets/images/' + playerThrows + '/' + playImage);
+    $('#winner_name').text("Winner: " + playerName);
+  }
+  else{
+    $('#win_pic').attr('src', 'assets/images/game.jpg');
+    $('#winner_name').text("It's A Tie!");
+  }
 }
 
 
 function theWinner(player, computer){
   if (player == computer){
     $('#result').text("It's a Tie!");
+    whoWins = 'tie';
   }
   else if(player == "paper" && computer == "rock"){
     playerScore++;
+    whoWins = 'player';
     $('#result').text(playerName + "'s Paper Covers " + computerName + "'s Rock");
   }
   else if (computer == "paper" && player =="rock"){
     computerScore++;
+    whoWins = 'computer';
     $('#result').text(computerName + "'s Paper Covers " + playerName + "'s Rock");
   }
   else if (player == "rock" && computer =="scissors"){
     playerScore++;
+    whoWins = 'player';
     $('#result').text(playerName + "'s Rock Blunts " + computerName + "'s Scissors");
   }
   else if (computer == "rock" && player =="scissors"){
     computerScore++;
+    whoWins = 'computer';
     $('#result').text(computerName + "'s Rock Blunts " + playerName + "'s Scissors");
   }
   else if (player == "scissors" && computer =="paper"){
     playerScore++;
+    whoWins = 'player';
     $('#result').text(playerName + "'s Scissors Cuts " + computerName + "'s Paper");
   }
   else if (computer == "scissors" && player =="paper"){
     computerScore++;
+    whoWins = 'computer';
     $('#result').text(computerName + "'s Scissors Cuts " + playerName + "'s Paper");
   }
 }

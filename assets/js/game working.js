@@ -6,7 +6,7 @@
 */
 
 // Different Arrays to use:
-var computerNames = ['Godzilla', 'MasterBlater', 'Skeletor', 'Aku', 'Mandark', 'Voldemort', 'MoJo', 'Mr. Burns', 'Big Brother'];
+var computerNames = ['Godzilla', 'MasterBlater', 'Skeletor', 'Aku', 'Mandark', 'Why Not Zoidberg?', 'Voldemort', 'MoJo', 'Mr. Burns', 'Big Brother', 'Robot Devil'];
 var rock = ['rock1.jpg', 'rock2.jpg', 'rock3.jpg', 'rock4.jpg'];
 var paper = ['paper1.jpg', 'paper2.jpg', 'paper3.jpg', 'paper4.jpg'];
 var scissor = ['scissors1.jpg', 'scissors2.jpg', 'scissors3.jpg', 'scissors4.jpg'];
@@ -21,9 +21,12 @@ var computerScore = 0;
 var playerThrows = 'rock'
 var computerThrows = randomChoice(playChoice);
 
+var playImage = '';
+var computerImage = '';
+var theWinner = 'computer';
+
 $('#rock').click(function() {
   playerThrows = "rock";
-  $('#rock').text("YO");
 });
 $('#paper').click(function() {
   playerThrows = "paper";
@@ -35,18 +38,18 @@ $('#scissors').click(function() {
 
 
 if (playerThrows == 'rock')
-  var playImage = randomChoice(rock);
+  playImage = randomChoice(rock);
 else if (playerThrows == 'paper')
-  var playImage = randomChoice(paper);
+  playImage = randomChoice(paper);
 else
-  var playImage = randomChoice(scissor);
+  playImage = randomChoice(scissor);
 
 if (computerThrows == 'rock')
-  var computerImage = randomChoice(rock);
+  computerImage = randomChoice(rock);
 else if (computerThrows == 'paper')
-  var computerImage = randomChoice(paper);
+  computerImage = randomChoice(paper);
 else
-  var computerImage = randomChoice(scissor);
+  computerImage = randomChoice(scissor);
 
 
 $('#computer_name').text(computerName + ": ");
@@ -64,6 +67,16 @@ $('#player_pic').attr('src', 'assets/images/' + playerThrows + '/' + playImage);
 
 $('#computer_pic').attr('src', 'assets/images/' + computerThrows + '/' + computerImage);
 
+if(theWinner == 'player'){
+  $('#win_pic').attr('src', 'assets/images/' + playerThrows + '/' + playImage);
+}
+else if(theWinner == 'computer'){
+  $('#win_pic').attr('src', 'assets/images/game.jpg');
+}
+else{
+  $('#win_pic').attr('src', 'assets/images/' + computerThrows + '/' + computerImage);
+}
+
 
 
 //Takes in an array of objects and returns one randomly
@@ -74,9 +87,11 @@ function randomChoice(arrayList){
 function theWinner(player, computer){
   if (player == computer){
     $('#result').text("It's a Tie!");
+    theWinner = 'tie';
   }
   else if(player == "paper" && computer == "rock"){
     playerScore++;
+    theWinner = 'player';
     $('#result').text(playerName + "'s Paper Covers " + computerName + "'s Rock");
   }
   else if (computer == "paper" && player =="rock"){
@@ -85,6 +100,7 @@ function theWinner(player, computer){
   }
   else if (player == "rock" && computer =="scissors"){
     playerScore++;
+    theWinner = 'player';
     $('#result').text(playerName + "'s Rock Blunts " + computerName + "'s Scissors");
   }
   else if (computer == "rock" && player =="scissors"){
@@ -93,6 +109,7 @@ function theWinner(player, computer){
   }
   else if (player == "scissors" && computer =="paper"){
     playerScore++;
+    theWinner = 'player';
     $('#result').text(playerName + "'s Scissors Cuts " + computerName + "'s Paper");
   }
   else if (computer == "scissors" && player =="paper"){
