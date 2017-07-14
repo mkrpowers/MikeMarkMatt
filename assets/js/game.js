@@ -1,8 +1,8 @@
 // Different Arrays to use:
 var computerNames = ['Godzilla', 'MasterBlater', 'Skeletor', 'Why Not Zoidberg', 'Aku', 'Mandark', 'Voldemort', 'MoJo', 'Mr. Burns', 'Big Brother'];
-var rock = ['rock1.jpg', 'rock2.jpg', 'rock3.jpg', 'rock4.jpg'];
-var paper = ['paper1.jpg', 'paper2.jpg', 'paper3.jpg', 'paper4.jpg'];
-var scissor = ['scissors1.jpg', 'scissors2.jpg', 'scissors3.jpg', 'scissors4.jpg'];
+var rock = ['rock1.jpg', 'rock2.jpg', 'rock3.jpg', 'rock4.jpg', 'rock5.jpg', 'rock6.jpg', 'rock7.jpg'];
+var paper = ['paper1.jpg', 'paper2.jpg', 'paper3.jpg', 'paper4.jpg', 'paper5.jpg', 'paper6.jpg', 'paper7.jpg'];
+var scissor = ['scissors1.jpg', 'scissors2.jpg', 'scissors3.jpg', 'scissors4.jpg', 'scissors5.jpg', 'scissors6.jpg', 'scissors7.jpg'];
 var playChoice = ['rock', 'paper', 'scissors'];
 
 // Get the Names
